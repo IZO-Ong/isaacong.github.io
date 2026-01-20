@@ -38,10 +38,6 @@ body {
 /* ==========================================================================
    2. LAYOUT CONTAINERS
    ========================================================================== */
-.portfolio-wrapper {
-  width: 100%;
-}
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -52,10 +48,6 @@ body {
 .section {
   padding: 100px 0;
   width: 100%;
-}
-
-.section:nth-child(even) {
-  background-color: var(--bg-alt);
 }
 
 /* ==========================================================================
@@ -74,16 +66,12 @@ body {
 
 .nav-content {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary);
-  letter-spacing: -0.02em;
+.flex-end {
+  justify-content: flex-end; /* Pushes links to the top right */
 }
 
 .nav-links {
@@ -104,25 +92,22 @@ body {
 }
 
 /* ==========================================================================
-   4. HERO SECTION
+   4. HERO & ABOUT SECTION
    ========================================================================== */
-/* HERO & ABOUT ROW */
 .hero-about-section {
   padding: 120px 0 80px;
-  background-color: var(--bg-color);
 }
 
 .hero-about-row {
   display: flex;
   align-items: center;
-  gap: 4rem; /* Balanced spacing between image and text */
+  gap: 4rem;
 }
 
-/* Rounded Square Profile */
 .profile-square {
-  width: 320px; /* Large presence */
+  width: 320px;
   height: 320px;
-  border-radius: 24px; /* Big rounded borders */
+  border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--border-color);
@@ -143,10 +128,9 @@ body {
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 2rem;
-  max-width: 600px; /* Fixes the "too long width" issue */
+  max-width: 600px;
 }
 
-/* Inline Stats under Bio */
 .stats-inline {
   display: flex;
   gap: 2rem;
@@ -164,13 +148,20 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* EXPERIENCE STYLING */
+/* ==========================================================================
+   5. EXPERIENCE & PROJECTS
+   ========================================================================== */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .exp-item {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid var(--border-color);
-  margin-bottom: 1.5rem;
 }
 
 .exp-header {
@@ -180,15 +171,107 @@ body {
   margin-bottom: 0.5rem;
 }
 
-.exp-header strong {
-  font-size: 1.2rem;
+.project-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  gap: 3rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
 }
 
-.exp-header span {
-  font-size: 0.9rem;
-  color: var(--text-muted);
+.project-row:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  transition: all 0.2s ease;
+}
+
+.project-image-container {
+  flex: 0 0 45%;
+  height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-row:hover .project-image {
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   6. UTILITIES (Tags & Section Titles)
+   ========================================================================== */
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  display: inline-block;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* Restored Tags/Skills Bubbles */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  transition: var(--transition);
+}
+
+/* ==========================================================================
+   7. RESPONSIVENESS
+   ========================================================================== */
 @media (max-width: 968px) {
   .hero-about-row {
     flex-direction: column;
@@ -202,221 +285,14 @@ body {
   .stats-inline {
     justify-content: center;
   }
-}
 
-/* ==========================================================================
-   5. COMPONENT: CARDS (Projects & Modules)
-   ========================================================================== */
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.project-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
-  background: var(--bg-color);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  transition: var(--transition);
-  gap: 2rem;
-}
-
-.project-row:hover {
-  border-color: var(--primary);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.08);
-}
-
-.project-details {
-  flex: 1; /* Takes up remaining space */
-}
-
-.project-details h3 {
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
-}
-
-.project-details p {
-  color: var(--text-muted);
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-}
-
-.project-image-container {
-  flex: 0 0 40%; /* Fixed width of 40% */
-  height: 250px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--border-color);
-}
-
-.project-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.project-row:hover .project-image {
-  transform: scale(1.05);
-}
-
-@media (max-width: 768px) {
   .project-row {
     flex-direction: column-reverse;
-    align-items: flex-start;
-  }
-  
-  .project-image-container {
-    width: 100%;
-    height: 200px;
-    margin-bottom: 1.5rem;
   }
 }
 
-.module-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1rem;
-}
-
-.module-card {
-  background: var(--card-bg);
-  padding: 1rem 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.module-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.module-code {
-  font-weight: 700;
-}
-
-.module-name {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-}
-
-.module-grade {
-  font-weight: 800;
-  color: var(--primary);
-  background: var(--primary-light);
-  width: 45px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-}
-
 /* ==========================================================================
-   6. UTILITIES & CONTACT
-   ========================================================================== */
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  position: relative;
-  display: inline-block;
-  letter-spacing: -0.01em;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 32px;
-  height: 4px;
-  background: var(--primary);
-  border-radius: 2px;
-}
-
-.text-center { text-align: center; }
-
-.max-w-prose {
-  max-width: 75ch;
-  text-align: justify;
-  text-align-last: left;
-  word-spacing: -0.05em; 
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tags span {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--primary);
-  background: var(--primary-light);
-  padding: 0.35rem 0.8rem;
-  border-radius: 100px;
-}
-
-/* Contact Section */
-.contact-links {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
-.contact-button {
-  background: var(--primary);
-  color: white;
-  padding: 1rem 3rem;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.contact-button:hover {
-  background: var(--primary-hover);
-  transform: translateY(-2px);
-}
-
-.social-row {
-  display: flex;
-  gap: 2.5rem;
-}
-
-.social-row a {
-  text-decoration: none;
-  color: var(--text-muted);
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-.social-row a:hover {
-  color: var(--primary);
-}
-
-.footer {
-  padding: 4rem 0;
-  text-align: center;
-  border-top: 1px solid var(--border-color);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* ==========================================================================
-   7. SEMESTER TIMELINE
+   8. MODULES PAGE STYLING
    ========================================================================== */
 .semester-block {
   margin-bottom: 4rem;
@@ -429,4 +305,58 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
+}
+
+/* The Grid for Module Cards */
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Individual Module Card */
+.module-card {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.module-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.module-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.module-code {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.module-name {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.module-grade {
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-light);
+  width: 48px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  flex-shrink: 0;
 }

@@ -1,0 +1,82 @@
+.semester-block { 
+  margin-bottom: 4rem; 
+}
+
+.semester-term { 
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.module-grid { 
+  display: grid; 
+  grid-template-columns: 
+  repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1rem; 
+}
+
+.semester-block { 
+  margin-bottom: 4rem; 
+}
+
+.semester-term { 
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.module-grid { 
+  display: grid; 
+  grid-template-columns: 
+  repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1rem; 
+}
+
+.module-card {
+  background: var(--card-bg);
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.module-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.module-code { 
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.module-name { 
+  font-size: 0.8rem; 
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+.module-grade {
+  font-weight: 800;
+  color: var(--primary);
+  background: var(--primary-light);
+  width: 48px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.module-card:hover { border-color: var(--primary);
+  transform: translateY(-2px);
+}

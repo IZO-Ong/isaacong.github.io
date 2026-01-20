@@ -23,8 +23,8 @@ export const PROJECTS: Project[] = [
   },
   {
     title: "NUS Cat Classifier",
-    description: "High-performance C++ command-line tool designed for efficient regex pattern scanning.",
-    tags: ["C++", "Regex", "Optimization", "CLI"],
+    description: "Full-stack web application designed to identify and classify the campus cats of NUS",
+    tags: ["React", "Javascript", "Vite", "Flask"],
     image: "/projects/nus-cat.png"
   }
 ];
@@ -61,7 +61,7 @@ export const ACADEMIC_PLAN: Semester[] = [
       { code: "MA2001", name: "Linear Algebra I", grade: "A" },
       { code: "MA2002", name: "Calculus", grade: "A" },
       { code: "NTW2032", name: "Death, Identity and Immortality", grade: "A" },
-      { code: "NSW2001", name: "Understanding the Social World: Singapore & Beyond", grade: "A-" },
+      { code: "NSW2001", name: "Understanding the Social World: Singapore & Beyond", grade: "A" },
     ]
   }
 ];

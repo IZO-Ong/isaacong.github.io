@@ -19,20 +19,14 @@ const Home: React.FC = () => {
           <div className="hero-text-container">
             <h1>Isaac <span className="highlight">Ong</span></h1>
             <p className="hero-description">
-              I am a Computer Science student at the National University of Singapore School of Computing and NUS College. 
-              My focus lies at the intersection of high-performance computing and complex systems, leveraging my background 
-              in data workflows and programming methodology.
+              I am a year 2 Computer Science student at the National University of Singapore and NUS College. 
+              I focus on the intersection of high-performance computing and database systems, 
+              leveraging my background in data workflows and programming methodology.
             </p>
-            <ul className="stats-inline">
-              <li><strong>Focus:</strong> Low-level Optimization</li>
-              <li><strong>Location:</strong> NUS School of Computing</li>
-              <li><strong>Current:</strong> CS Sophomore</li>
-            </ul>
           </div>
         </div>
       </section>
 
-      {/* Experience Section */}
       <Section id="experience" title="Experience">
         <div className="experience-list">
           <div className="exp-item">
@@ -51,7 +45,6 @@ const Home: React.FC = () => {
         </div>
       </Section>
 
-      {/* Projects Section */}
       <Section id="projects" title="Projects">
         <div className="projects-container">
           {projects.map((project, index) => (
@@ -60,7 +53,6 @@ const Home: React.FC = () => {
         </div>
       </Section>
 
-      {/* Contact Section */}
       <Section id="contact" title="Get In Touch" centered>
         <div className="contact-links">
           <a href="mailto:ong.izo.zh@gmail.com" className="contact-button">Email Me</a>

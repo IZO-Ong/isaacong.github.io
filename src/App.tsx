@@ -1,8 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import { Provider } from 'react-redux';
 import { store } from './store';
-import './App.css';
+
+import './styles/variables.css';
+import './styles/layout.css';
+import './styles/home.css';
+import './styles/modules.css';
 
 import Home from './pages/Home';
 import Modules from './pages/Modules';
@@ -13,9 +18,9 @@ const App: React.FC = () => {
       <Router>
         <div className="portfolio-wrapper">
           <nav className="navbar">
-            <div className="container nav-content">
+            <div className="container nav-content flex-end">
               <ul className="nav-links">
-                <li><Link to="/#top">About</Link></li>
+                <li><Link smooth to="/#about">About</Link></li>
                 <li><Link to="/modules">Modules</Link></li>
               </ul>
             </div>
