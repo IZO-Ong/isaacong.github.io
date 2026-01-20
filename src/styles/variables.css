@@ -1,17 +1,19 @@
 :root {
-  --primary: #2563eb;
-  --primary-hover: #1e40af;
-  --primary-light: #eff6ff;
+  /* Core Purple Palette */
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --primary-light: #eef2ff;
+  
   --bg-color: #ffffff;
-  --bg-alt: #fafafa;
-  --text-main: #1e293b;
-  --text-muted: #64748b;
+  --bg-alt: #fbfbfe;
+  --text-main: #1e1b4b;
+  --text-muted: #475569;
   --card-bg: #f8fafc;
   --border-color: #e2e8f0;
+  
   --nav-height: 70px;
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 * {
   box-sizing: border-box;
   margin: 0;
