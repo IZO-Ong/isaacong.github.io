@@ -5,13 +5,9 @@ import { store } from './store';
 
 import './styles/variables.css';
 import './styles/layout.css';
-import './styles/home.css';
-import './styles/modules.css';
-import './styles/project.css';
-import './styles/contact.css';
 
-import Home from './pages/Home';
-import Modules from './pages/Modules';
+import Home from './pages/Home/Home';
+import Modules from './pages/Modules/Modules';
 
 const App: React.FC = () => {
   return (

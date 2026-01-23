@@ -6,7 +6,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Epstein's LinkedIn Files",
     description: "Chrome extension using MediaPipe to redact eyes and names on LinkedIn.",
-    tags: ["Typescript", "React", "MediaPipe"],
+    tags: ["React", "Vite", "MediaPipe"],
     image: "/projects/epstein-linkedin.png",
     link: "https://github.com/IceyFoxes/epstein-extension"
   },

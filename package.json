@@ -15,6 +15,7 @@
     "@reduxjs/toolkit": "^2.11.2",
     "framer-motion": "^12.29.0",
     "lucide-react": "^0.562.0",
+    "lucide-vue": "^0.517.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",

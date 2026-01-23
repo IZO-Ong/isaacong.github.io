@@ -1,9 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import type { RootState } from '../store';
-import Section from '../components/Section';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import type { Module } from '../types';
+import type { RootState } from '../../store';
+import Section from '../../components/Section';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import type { Module } from '../../types';
+
+import './Modules.css';
 
 const ModuleCard: React.FC<{ mod: Module }> = ({ mod }) => {
   const { domRef, isVisible } = useScrollReveal();

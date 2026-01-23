@@ -1,6 +1,8 @@
 import React from 'react';
-import { useScrollReveal } from '../hooks/useScrollReveal';
-import type { Project } from '../types';
+import { useScrollReveal } from '../../hooks/useScrollReveal';
+import type { Project } from '../../types';
+
+import './ProjectRow.css';
 
 interface ProjectRowProps {
   project: Project;
