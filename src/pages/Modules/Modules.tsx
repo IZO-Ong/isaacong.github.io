@@ -18,7 +18,7 @@ const ModuleCard: React.FC<{ mod: Module }> = ({ mod }) => {
       <div className="module-info">
         <div className="module-header-row">
           <span className="module-code">{mod.code}</span>
-          {mod.topStudent && <span className="top-badge">Top Student</span>}
+          {mod.topStudent && <span className="top-badge">Top Students</span>}
         </div>
         <span className="module-name">{mod.name}</span>
       </div>

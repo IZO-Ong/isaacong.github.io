@@ -1,4 +1,4 @@
-import type { Project, Semester } from '../types';
+import type { Project, Semester, Award } from '../types';
 
 export const PROFILE_IMAGE = "/profile.jpg";
 
@@ -79,5 +79,20 @@ export const ACADEMIC_PLAN: Semester[] = [
       { code: "NTW2032", name: "Identity, Death, and Immortality", grade: "A" },
       { code: "NSW2001", name: "Understanding the Social World: Singapore & Beyond", grade: "A" },
     ]
+  }
+];
+
+export const AWARDS: Award[] = [
+  {
+    title: "Dean's List, School of Computing",
+    issuer: "National University of Singapore",
+    date: "AY25/26 Semester 1",
+    description: "Recognized for meritorious academic achievement, placing in the top 5-10% of the cohort."
+  },
+  {
+    title: "Sugar Industry of Singapore Prize",
+    issuer: "National University of Singapore",
+    date: "AY24/25 Semester 2",
+    description: "Awarded to top two performing first-year students in Faculty of Science."
   }
 ];

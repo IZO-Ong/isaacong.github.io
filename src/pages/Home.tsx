@@ -1,12 +1,13 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import type { RootState } from '../../store';
-import Section from '../../components/Section';
-import ProjectRow from '../../components/ProjectRow/ProjectRow';
-import HeroText from '../../components/TypingHero/TypingHero';
-import AboutSection from '../../components/AboutSection/AboutSection';
-import ContactSection from '../../components/ContactSection/ContactSection';
-import { PROFILE_IMAGE } from '../../constants/data';
+import type { RootState } from '../store';
+import Section from '../components/Section';
+import ProjectRow from '../components/ProjectRow/ProjectRow';
+import HeroText from '../components/TypingSection/TypingSection';
+import AboutSection from '../components/AboutSection/AboutSection';
+import AwardsSection from '../components/AwardsSection/AwardsSection';
+import ContactSection from '../components/ContactSection/ContactSection';
+import { PROFILE_IMAGE } from '../constants/data';
 
 const Home: React.FC = () => {
   const projects = useSelector((state: RootState) => state.portfolio.projects);
@@ -34,6 +35,8 @@ const Home: React.FC = () => {
           ))}
         </div>
       </Section>
+
+      <AwardsSection />
 
       <ContactSection />
     </div>

@@ -34,6 +34,20 @@
   opacity: 0.3;
 }
 
+@media (max-width: 768px) {
+  .section-title {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .navbar {
   width: 100%;
   height: var(--nav-height);

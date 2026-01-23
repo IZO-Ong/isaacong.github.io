@@ -17,3 +17,10 @@ export interface Semester {
   term: string;
   modules: Module[];
 }
+
+export interface Award {
+  title: string;
+  issuer: string;
+  date: string;
+  description: string;
+}

@@ -6,7 +6,7 @@ import { store } from './store';
 import './styles/variables.css';
 import './styles/layout.css';
 
-import Home from './pages/Home/Home';
+import Home from './pages/Home';
 import Modules from './pages/Modules/Modules';
 
 const App: React.FC = () => {

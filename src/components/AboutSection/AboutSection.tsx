@@ -33,8 +33,8 @@ const AboutSection = () => {
         <div className="about-left">
           <h2 className="section-title">Hi there!</h2>
           <p className="about-description">
-            I am a Year 2 Computer Science student at NUS, NUS College, and a NUS Merit Scholarship holder. 
-            I am interested in database systems, systems optimization, and machine learning, and am 
+            I am a Year 2 Computer Science student at NUS and NUS College, and currently hold the NUS Merit Scholarship. 
+            I am interested in databases, systems optimization and machine learning, and am 
             currently pursuing a Specialization in Database Systems and a Minor in Data Engineering. 
           </p>
         </div>

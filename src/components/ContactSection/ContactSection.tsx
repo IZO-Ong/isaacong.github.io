@@ -9,7 +9,7 @@ const ContactSection: React.FC = () => {
       <div className="contact-container">
         <div className="availability-tag">
           <span className="pulse-dot"></span>
-          Open to 2026 Summer Opportunities
+          Open to 2026 Summer Internships
         </div>
 
         <p className="contact-subtitle">
