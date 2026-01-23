@@ -3,8 +3,6 @@ import { Mail, Github, Linkedin, ExternalLink, FileText } from 'lucide-react';
 import Section from '../Section';
 import './ContactSection.css';
 
-import resumePDF from '../../assets/Isaac_Ong_Resume.pdf';
-
 const ContactSection: React.FC = () => {
   return (
     <Section id="contact" title="Let's Connect" centered>
@@ -21,7 +19,7 @@ const ContactSection: React.FC = () => {
         <div className="contact-main">
           {/* Resume Card */}
           <a 
-            href={resumePDF}
+            href="/Isaac_Ong_Resume.pdf"
             target="_blank" 
             rel="noopener noreferrer" 
             className="contact-card primary resume-cta"
