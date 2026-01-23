@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
   {
     title: "NetPulse",
     description: "Desktop network diagnostic tool built with JavaFX and Spring Boot.",
-    tags: ["Java", "JavaFX", "Spring Boot", "Socket Programming"],
+    tags: ["JavaFX", "Spring Boot", "Socket Programming"],
     image: netpulseImg,
     link: "https://github.com/IZO-Ong/NetPulse"
   },
