@@ -27,24 +27,6 @@ const Home: React.FC = () => {
 
       <AboutSection />
 
-      <Section id="experience" title="Experience">
-        <div className="experience-list">
-          <div className="exp-item">
-            <div className="exp-header">
-              <strong>Teaching Assistant (CS1010X)</strong>
-              <span>Jan 2025 – Jun 2025</span>
-            </div>
-            <p>Guided students through Programming Methodology at NUS.</p>
-          </div>
-          <div className="exp-item">
-            <div className="exp-header">
-              <strong>Republic of Singapore Air Force</strong>
-            </div>
-            <p>Developed data workflows using Excel Macros to manage information movement.</p>
-          </div>
-        </div>
-      </Section>
-
       <Section id="projects" title="Projects">
         <div className="projects-container">
           {projects.map((project, index) => (

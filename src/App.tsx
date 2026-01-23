@@ -7,6 +7,7 @@ import './styles/variables.css';
 import './styles/layout.css';
 import './styles/home.css';
 import './styles/modules.css';
+import './styles/project.css';
 import './styles/contact.css';
 
 import Home from './pages/Home';
