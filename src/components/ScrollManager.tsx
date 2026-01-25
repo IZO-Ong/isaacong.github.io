@@ -9,34 +9,28 @@ const ScrollManager = () => {
   const scrollPositions = useSelector((state: RootState) => state.portfolio.scrollPositions);
   const [isRestoring, setIsRestoring] = useState(false);
 
-  // 1. Restore scroll position BEFORE the browser paints
-  // useLayoutEffect runs synchronously after DOM mutations but before paint
   useLayoutEffect(() => {
     const savedY = scrollPositions[location.pathname] || 0;
     
     if (savedY > 0) {
       setIsRestoring(true);
       
-      // We use a small timeout to ensure the content height has stabilized
+      // timeout
       const timer = setTimeout(() => {
         window.scrollTo({ top: savedY, behavior: 'instant' });
         
-        // Use requestAnimationFrame to ensure we only show content 
-        // AFTER the scroll has actually happened
         requestAnimationFrame(() => {
           setIsRestoring(false);
         });
-      }, 50); // Small buffer for rendering your React components
+      }, 50);
 
       return () => clearTimeout(timer);
     } else {
-      // If we are going to the top anyway, no need to hide anything
       window.scrollTo(0, 0);
       setIsRestoring(false);
     }
   }, [location.pathname]);
 
-  // 2. Add a global "loading" class to the body to hide the flash
   useEffect(() => {
     if (isRestoring) {
       document.body.classList.add('is-restoring-scroll');
@@ -45,11 +39,10 @@ const ScrollManager = () => {
     }
   }, [isRestoring]);
 
-  // 3. Save scroll (Debounced)
   useEffect(() => {
     let timeoutId: number;
     const handleScroll = () => {
-      if (isRestoring) return; // Don't save while we are currently jumping
+      if (isRestoring) return;
       window.clearTimeout(timeoutId);
       timeoutId = window.setTimeout(() => {
         dispatch(saveScrollPosition({ path: location.pathname, y: window.scrollY }));
